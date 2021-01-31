@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".VoiceCalc"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/llay_inp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="@dimen/_8sdp"
+        android:gravity=""
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_mic"
+        >
+        <com.loopeer.cardstack.CardStackView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/looper"
+            >
+
+        </com.loopeer.cardstack.CardStackView>
+        <TextView
+            android:id="@+id/txt_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="100*2002"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
+            android:gravity="end"
+            android:padding="@dimen/_8sdp"
+            />
+
+        <TextView
+            android:id="@+id/txt_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="10004"
+            android:textSize="@dimen/_30sdp"
+            android:textColor="@color/black"
+            android:gravity="end"
+            android:padding="@dimen/_8sdp"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_mic"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+
+        android:src="@drawable/ic_mic_black"
+        app:layout_constraintBottom_toTopOf="@+id/text_mic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+    />
+
+    <TextView
+        android:id="@+id/text_mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap mic to Speak"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/colorPrimary"
+        android:padding="@dimen/_8sdp"
+
+        android:layout_marginBottom="@dimen/_16sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

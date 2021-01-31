@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:id="@+id/llay_inp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="@dimen/_8sdp"
+        android:gravity="bottom"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/llay_calc_btn"
+        >
+
+        <TextView
+            android:id="@+id/txt_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="100*2002"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
+            android:gravity="end"
+            android:padding="@dimen/_8sdp"
+            android:maxLines="4"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/txt_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="10004"
+            android:textSize="@dimen/_30sdp"
+            android:textColor="@color/black"
+            android:gravity="end"
+            android:padding="@dimen/_8sdp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llay_calc_btn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="@dimen/_8sdp"
+        android:background="@drawable/btn_lay_bg"
+
+
+        app:layout_constraintTop_toBottomOf="@+id/llay_inp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+                <Button
+                    android:id="@+id/clear"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_8sdp"
+                    android:text="C"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/per"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_8sdp"
+                    android:text="%"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                   />
+
+                <Button
+                    android:id="@+id/ac"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_8sdp"
+                    android:text="AC"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+
+                    />
+
+                <Button
+                    android:id="@+id/div"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_8sdp"
+                    android:text="/"
+                    android:textColor="#D81B60"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+
+            <Button
+                android:id="@+id/seven"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:padding="@dimen/_8sdp"
+                android:layout_weight="1"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+            <Button
+                android:id="@+id/eight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+
+            <Button
+                android:id="@+id/nine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+
+                />
+
+            <Button
+                android:id="@+id/mul"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#D81B60"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+
+            <Button
+                android:id="@+id/four"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="@dimen/_8sdp"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+
+            <Button
+                android:id="@+id/five"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+
+            <Button
+                android:id="@+id/six"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+
+                />
+
+            <Button
+                android:id="@+id/sub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="#D81B60"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+
+            <Button
+                android:id="@+id/one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+
+            <Button
+                android:id="@+id/two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+
+            <Button
+                android:id="@+id/three"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+
+                />
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textColor="#D81B60"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+
+            <Button
+                android:id="@+id/z2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+
+            <Button
+                android:id="@+id/z1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+
+            <Button
+                android:id="@+id/dot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+
+                />
+
+            <Button
+                android:id="@+id/eq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="="
+                android:textColor="#D81B60"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_8sdp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
